@@ -1,6 +1,6 @@
 # Introduction
 
-An implementation of the java.util.Queue interface using only stacks internally. In order to maintain performant for both poll and offer operations, two stacks are maintained internally -- poll and offer. When being offerred elements, all elements in poll stack are flipped onto the offer stack, and the new element is pushed onto the offer stack. When being polled, all elements in the offer stack are flipped onto the poll stack, and the head element is popped off of the poll stack. At any given time, all elements are completely contained in either the offer (in order of insertion) or poll (in reverse order of insertion) stack. This approach is tuned to be performant when a large number of sequential offer operations are followed by a large number of poll operations.
+[QueueStack](http://github.com/jburwell/queue-stack/blob/master/src/main/net/cockamamy/playpen/queuestack/QueueStack.java) is an implementation of the java.util.Queue interface using only stacks internally. In order to maintain performant for both poll and offer operations, two stacks are maintained internally -- poll and offer. When being offerred elements, all elements in poll stack are flipped onto the offer stack, and the new element is pushed onto the offer stack. When being polled, all elements in the offer stack are flipped onto the poll stack, and the head element is popped off of the poll stack. At any given time, all elements are completely contained in either the offer (in order of insertion) or poll (in reverse order of insertion) stack. This approach is tuned to be performant when a large number of sequential offer operations are followed by a large number of poll operations.
 
 Unit and performance test suites are provided to verify the proper operation of the implementation and the performance of it under the conditions described above.
 
@@ -68,3 +68,9 @@ This action will result in output similar to following:
 
 	BUILD SUCCESSFUL
 	Total time: 3 seconds
+
+# Notes
+
+The following are notes regarding the implementation and state of the code:
+
+	* The unit tests could use some DRYing out.

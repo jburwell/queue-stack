@@ -1,6 +1,6 @@
 <!--
 
- Copyright (c) 2008-2010, John Burwell
+ Copyright (c) 2010, John Burwell
   
  All rights reserved.
   
@@ -60,19 +60,13 @@
 		
 	</path>
 
-	<target name="clean">
+	<target name="clean" description="Resets the build enrivonment to a clean state">
 
 		<delete dir="${global.build.dir}" />
 
 	</target>
 
-	<target name="init">
-
-		<mkdir dir="${global.build.dir}" />		
-
-	</target>
-
-	<target name="compile" depends="init">
+	<target name="compile" description="Compiles the project's classes">
 
 		<mkdir dir="${compile.classes.dir}" />
 		<javac srcdir="${compile.src.dir}" 
@@ -82,7 +76,7 @@
 
 	</target>
 
-	<target name="test" depends="compile">
+	<target name="test" depends="compile" description="Performs unit and performance testing of the project">
 
 		<mkdir dir="${test.classes.dir}" />
 		<javac classpathref="test.classpath"

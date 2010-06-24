@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2008-2010, John Burwell
+ * Copyright (c) 2010, John Burwell
  * 
  * All rights reserved.
  * 
