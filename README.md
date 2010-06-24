@@ -73,4 +73,4 @@ This action will result in output similar to following:
 
 The following are notes regarding the implementation and state of the code:
 
-	* The unit tests could use some DRYing out.
+* The unit tests could use some DRYing out.
